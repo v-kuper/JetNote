@@ -58,7 +58,18 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
+    implementation(libs.lifecycle.viewmodel.compose)
+
+    // Hilt-Dagger
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
+
+    // Room DB
+    implementation(libs.room.runtime)
+    ksp(libs.room.compiler)
+
+    // Coroutines
+    implementation(libs.coroutines.core)
+    implementation(libs.coroutines.android)
+    implementation(libs.coroutines.play.services)
 }
