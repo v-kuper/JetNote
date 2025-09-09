@@ -12,6 +12,7 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
 import com.example.jetnote.model.Note
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface NoteDatabaseDao {
@@ -21,7 +22,7 @@ interface NoteDatabaseDao {
      * @return Список всех заметок.
      */
     @Query("SELECT * from notes_tbl")
-    fun getNotes(): List<Note>
+    fun getNotes(): Flow<List<Note>>
 
     /**
      * Получение заметки по её уникальному идентификатору.

@@ -132,7 +132,7 @@ fun NoteRow(
             .padding(horizontal = 14.dp, vertical = 8.dp)) {
             Text(text = note.title, style = MaterialTheme.typography.titleLarge)
             Text(text = note.description, style = MaterialTheme.typography.titleMedium)
-            Text(text = note.entryDate.format(DateTimeFormatter.ofPattern("EEE, d MMM", Locale("ru"))), style = MaterialTheme.typography.bodySmall)
+//            Text(text = note.entryDate.format(DateTimeFormatter.ofPattern("EEE, d MMM", Locale("ru"))), style = MaterialTheme.typography.bodySmall)
         }
      }
 }
