@@ -36,6 +36,7 @@ import com.example.jetnote.components.NoteButton
 import com.example.jetnote.components.NoteInputText
 import com.example.jetnote.data.NotesDataSource
 import com.example.jetnote.model.Note
+import com.example.jetnote.until.formatDate
 import java.time.format.DateTimeFormatter
 import java.util.Locale
 
@@ -132,7 +133,7 @@ fun NoteRow(
             .padding(horizontal = 14.dp, vertical = 8.dp)) {
             Text(text = note.title, style = MaterialTheme.typography.titleLarge)
             Text(text = note.description, style = MaterialTheme.typography.titleMedium)
-//            Text(text = note.entryDate.format(DateTimeFormatter.ofPattern("EEE, d MMM", Locale("ru"))), style = MaterialTheme.typography.bodySmall)
+            Text(text = formatDate(note.entryDate.time), style = MaterialTheme.typography.bodySmall)
         }
      }
 }
